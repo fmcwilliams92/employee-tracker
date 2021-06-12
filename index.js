@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const consoleTable = require('console.table');
+const db = require('./db');
 
 function questions() {
   inquirer.prompt([
@@ -42,9 +43,22 @@ function questions() {
       ]
     }
   ])
+  .catch(err) {
+    
+  }
   .then((res) => {
     console.log(res);
   });
 }
+
+// view employees by manager
+
+// view employees by department
+
+// update employee manager
+
+// delete department, roles and employees
+
+// view the utilized budget of the department, aka the combines salaries
 
 questions();
