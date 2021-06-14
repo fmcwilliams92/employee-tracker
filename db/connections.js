@@ -1,12 +1,12 @@
 const mysql2 = require('mysql2');
 const connection = mysql2.createConnection({
   host: 'localhost',
-  user: process.env.DB_USER,
-  password: process.env.DB_PW,
-  database: process.env.DB_NAME
+  user: 'root', // process.env.DB_USER,
+  password: 'Bootcamp123!!', // process.env.DB_PW,
+  database: 'employee_tracker', // process.env.DB_NAME
 });
 
-connection.connect(function(err) {
+connection.connect(err => {
   if (err) throw err;
 });
 
